@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Selection Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .payment-form {
+            background-color: #fff;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-form h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .payment-form label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .payment-form select,
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .payment-form select:focus,
+        .payment-form input:focus {
+            border-color: #666;
+            outline: none;
+        }
+
+        .payment-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0056d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .payment-form button:hover {
+            background-color: #003f9a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-form">
+        <h3>Book Selection</h3>
+        <label for="school">Select School</label>
+        <select id="school" required>
+            <option value="" disabled selected>Select School</option>
+            <option value="school1">School 1</option>
+            <option value="school2">School 2</option>
+            <option value="school3">School 3</option>
+            <!-- Add more school options as needed -->
+        </select>
+
+        <label for="class">Select Class</label>
+        <select id="class" required>
+            <option value="" disabled selected>Select Class</option>
+            <option value="class1">Class 1</option>
+            <option value="class2">Class 2</option>
+            <option value="class3">Class 3</option>
+            <!-- Add more class options as needed -->
+        </select>
+
+        <button type="button" id="select-books">Select Books</button>
+    </div>
+
+    <script>
+        document.getElementById("select-books").addEventListener("click", function() {
+            const selectedSchool = document.getElementById("school").value;
+            const selectedClass = document.getElementById("class").value;
+
+            if (selectedSchool && selectedClass) {
+                // Redirect based on the selected values of School and Class
+                if (selectedSchool === "school1" && selectedClass === "class1") {
+                    window.location.href = "https://rzp.io/i/3RROCHnbAJ";
+                } else if (selectedSchool === "school1" && selectedClass === "class2") {
+                    window.location.href = "https://rzp.io/i/3RROCHnbAJ";
+                } else if (selectedSchool === "school2" && selectedClass === "class1") {
+                    window.location.href = "https://rzp.io/i/3RROCHnbAJ";
+                }
+                // Add more conditions as needed for other school and class combinations
+            } else {
+                alert("Please select both School and Class.");
+            }
+        });
+    </script>
+
+</body>
+</html>
